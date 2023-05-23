@@ -3,7 +3,7 @@
   tasks:
   
     - name: Install nodejs package
-
+      ansible.builtin.apt:
         name:
           - nodejs
           - npm
