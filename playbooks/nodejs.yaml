@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Update apt repo and cache
-      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+      apt: curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
     - name: Install nodejs and npm
       apt:
         pkg:
