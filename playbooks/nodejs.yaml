@@ -5,7 +5,7 @@
       shell: curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
       args:
         executable: /bin/bash
-         - name: Install nodejs package
+    - name: Install nodejs package
       become: true
       ansible.builtin.apt:
         name:
