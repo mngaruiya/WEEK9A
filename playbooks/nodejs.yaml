@@ -1,11 +1,8 @@
-- name: Install node and npm
+- name: Install NodeJs
   hosts: all
   tasks:
-    - name: Update apt repo and cache
-      apt: curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
-    - name: Install nodejs and npm
-      apt:
-        pkg:
-          - nodejs
-          - npm
+    - name: Install Node
+      shell: curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+      args:
+        executable: /bin/bash
         
